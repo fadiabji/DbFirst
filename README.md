@@ -1,8 +1,8 @@
 # DbFirst
 
-// install 3 backages using nuget manager 
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Tools
+// install 3 backages using nuget manager:
+Microsoft.EntityFrameworkCore, 
+Microsoft.EntityFrameworkCore.Tools, 
 Microsoft.EntityFrameworkCore.SqlServer
 
 // Connection string to my database on my local server
