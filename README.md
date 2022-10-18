@@ -19,7 +19,8 @@ Scaffold-DbContext "Server=DESKTOP-8FGUNU9;Database=DatabaseFirstAssignment;Trus
 // Add this lins  to appsettings.json
 "ConnectionStrings": { },
 
-// Add thos to program.cs file
+// Add thos to program.cs file:
+
 builder.Services.AddDbContext<Movie_DBContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("MovieDatatbase")
     ));
