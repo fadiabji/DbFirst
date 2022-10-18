@@ -1,7 +1,17 @@
+using DbFirst.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Added this service to this file CRUD work fine
+builder.Services.AddDbContext<Movie_DBContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("MovieDatatbase")
+));
+
 
 var app = builder.Build();
 
