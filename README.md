@@ -25,7 +25,8 @@ builder.Services.AddDbContext<Movie_DBContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("MovieDatatbase")
     ));
 
-public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+// add this constracture if it was doesn't exist already to file was generated called MovieDBContext.cs :
+public Movie_DBContext(DbContextOptions<Movie_DBContext> options)
             : base(options)
         {
         }
