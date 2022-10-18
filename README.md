@@ -20,13 +20,14 @@ Scaffold-DbContext "Server=DESKTOP-8FGUNU9;Database=DatabaseFirstAssignment;Trus
 "ConnectionStrings": { },
 
 // Add thos to program.cs file
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<Movie_DBContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("MovieDatatbase")
+    ));
 
 public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 
